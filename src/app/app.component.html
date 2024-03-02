@@ -1,0 +1,16 @@
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>local_hospital</mat-icon>
+  </button>
+  <h1>Medicamentos app</h1>
+  <span class="example-spacer"></span>
+
+  <div class="links">
+    <a [routerLink]="'/register'" class="margin">Registrar</a>
+    <a [routerLink]="'/list'" class="margin">Listar</a>
+  </div>
+</mat-toolbar>
+
+<div class="content">
+  <router-outlet> </router-outlet>
+</div>

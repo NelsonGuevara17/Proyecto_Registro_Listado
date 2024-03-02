@@ -1,0 +1,42 @@
+<h1>Medicamento</h1>
+<form class="form" [formGroup]="medicine">
+    <mat-form-field appearance="fill">
+        <mat-label>Id</mat-label>
+        <input type="number" matInput formControlName="id">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Medicamento</mat-label>
+        <input matInput formControlName="medicineName">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Descripcion</mat-label>
+        <input matInput formControlName="description">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="date">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker">
+            <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Cantidad</mat-label>
+        <input type="number" matInput formControlName="quantity">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Precio</mat-label>
+        <input type="number" matInput formControlName="price">
+    </mat-form-field>
+
+    <div class="centerbutton">
+        <button mat-stroked-button color="accent" (click)="loadData()">Grabar</button>
+        <button [routerLink]="'/list'" mat-stroked-button color="accent">Listar</button>
+    </div>
+</form>
